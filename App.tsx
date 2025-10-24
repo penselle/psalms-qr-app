@@ -5,6 +5,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import Login from '@/screens/Login';
 import Dashboard from '@/screens/Dashboard';
 import Scanner from '@/screens/Scanner';
+import SplashScreen from '@/screens/SplashScreen';
 
 const Stack = createStackNavigator();
 
@@ -12,7 +13,8 @@ export default function App() {
   return (
     <AuthProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Splash">
+          <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Scanner" component={Scanner} />

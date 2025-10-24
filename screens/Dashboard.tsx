@@ -1,4 +1,5 @@
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useLayoutEffect, useEffect } from 'react';
+import { BackHandler } from 'react-native';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { AuthContext } from '@/context/AuthContext'; // Adjust path if your AuthContext is elsewhere
 import LogoutToolbar from '@/components/toolbar/LogoutToolbar'; // Adjust path if needed
@@ -18,6 +19,12 @@ const Dashboard = ({ navigation }: Props) => {
       headerLeft: () => null,
     });
   }, [navigation]);
+
+  useEffect(() => {
+    // Disable back button
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true);
+    return () => backHandler.remove();
+  }, []);
 
   return (
     <View style={styles.container}>
