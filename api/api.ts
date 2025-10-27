@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AttendanceForm } from '@/types';
 
 // Use environment variable for API base URL, fallback to local for development
-const API_BASE_URL = process.env.EXPO_API_BASE_URL || 'https://qr-api.cuddlerschristianacademy.com';
+const API_BASE_URL = process.env.EXPO_API_BASE_URL || 'https://api.qrapp-cca.com';
 
 export const login = async (email: string, password: string) => {
   try {
