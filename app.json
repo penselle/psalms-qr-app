@@ -2,7 +2,7 @@
   "expo": {
     "name": "Psalms QR - Cuddlers Christian Academy",
     "slug": "psalms-qr-cuddlers-christian-academy",
-    "version": "1.0.2",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,7 +20,7 @@
     ],
     "android": {
       "package": "com.emmanuelinnovations.qrapp",
-      "versionCode": 3,
+      "versionCode": 4,
       "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/cuddlers-logo-android.png",
